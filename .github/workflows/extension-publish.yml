@@ -34,8 +34,8 @@ jobs:
         with:
           draft: false
           prerelease: false
-          release_name: ${{ steps.version.outputs.version }}
-          tag_name: tags/beta/${{ steps.version.outputs.version }}
+          release_name: v${{ steps.version.outputs.version }}
+          tag_name: beta/v${{ steps.version.outputs.version }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - name: Upload release artifact
