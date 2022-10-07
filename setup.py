@@ -7,7 +7,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="extension",
-    version="1.3.5",
+    version="1.3.6",
     description="A AWS Mainframe Modernization and Stonebranch working extension example",
     long_description=long_description,
     long_description_content_type="text/markdown",
