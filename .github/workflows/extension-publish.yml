@@ -26,7 +26,7 @@ jobs:
           mv *.egg extension_archive.zip
           zip -r aws_stonebranch.zip extension_archive* template*
       - name: version
-        run: python3 setup.py --version
+        run: echo "::set-output name=version::$(python3 setup.py --version)"
         id: version
       - name: release
         uses: actions/create-release@v1
@@ -35,7 +35,7 @@ jobs:
           draft: false
           prerelease: false
           release_name: ${{ steps.version.outputs.version }}
-          tag_name: ${{ github.ref }}
+          tag_name: -beta
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - name: Upload release artifact
