@@ -1,10 +1,10 @@
-# Author  : Huseyin Gomleksizoglu
+# Author  : Vaidyanathan Ganesa Sankaran ; Huseyin Gomleksizoglu; Pablo Alonso Prieto; Praveen Kumar
 # Date    : "05-Oct-2022"
 # Version : extension.py: 20221005
 #
 # MIT No Attribution
 
-# Copyright 2021 Stonebranch Inc
+# Copyright 2021 Amazon Web Services Inc ; Stonebranch Inc
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this
 # software and associated documentation files (the "Software"), to deal in the Software

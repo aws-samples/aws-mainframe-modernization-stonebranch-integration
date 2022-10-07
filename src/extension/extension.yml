@@ -4,6 +4,6 @@ extension:
   api_level: 1.1.0
   requires_python: ">=3.7"
 owner:
-  name: Huseyin Gomleksizoglu
-  organization: Stonebranch Inc., Amazon Web Services
+  name: Vaidyanathan Ganesa Sankaran, Huseyin Gomleksizoglu ; Pablo Alonso Prieto ; Praveen Kumar Jeyarajan
+  organization: Amazon Web Services Inc ; Stonebranch Inc
 comments: This universal extension created for AWS Mainframe Modernization integration

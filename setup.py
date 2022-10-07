@@ -8,10 +8,10 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 setup(
     name="extension",
     version="1.3.5",
-    description="A AWS M2 and Stonebranch working extension example",
+    description="A AWS Mainframe Modernization and Stonebranch working extension example",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://gitlab.aws.dev/vaidysan/aws-mainframe-modernization-stonebranch-integration",
+    url="https://github.com/aws-samples/aws-mainframe-modernization-stonebranch-integration",
     author="Vaidyanathan GanesaSankaran",
     author_email="vaidysan@amazon.com",
     classifiers=[
@@ -34,6 +34,6 @@ setup(
         "extension": ["extension.yml"],
     },
     project_urls={
-        "Source": "https://gitlab.aws.dev/vaidysan/aws-mainframe-modernization-stonebranch-integration",
+        "Source": "https://github.com/aws-samples/aws-mainframe-modernization-stonebranch-integration",
     },
 )
