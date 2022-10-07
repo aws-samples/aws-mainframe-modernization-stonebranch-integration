@@ -19,15 +19,31 @@ jobs:
           python3 -m flake8 --ignore=E501,E722
       - name: Build package
         run: |
-          pip3 install --no-cache --upgrade pip setuptools twine
-          VERSION=`python3 setup.py --version`
+          pip3 install --no-cache --upgrade pip setuptools
           python3 setup.py bdist_egg
           cp assets/* dist/
           cd dist/
           mv *.egg extension_archive.zip
           zip -r aws_stonebranch.zip extension_archive* template*
-      - name: Archive extension artifacts
-        uses: actions/upload-artifact@v3
+      - name: version
+        run: python3 setup.py --version
+        id: version
+      - name: release
+        uses: actions/create-release@v1
+        id: create_release
         with:
-          name: aws_mainframe_modernization_stonebranch_extension
-          path: dist/aws_stonebranch.zip
+          draft: false
+          prerelease: false
+          release_name: ${{ steps.version.outputs.version }}
+          tag_name: ${{ github.ref }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Upload release artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: dist/aws_stonebranch.zip
+          asset_name: aws_mainframe_modernization_stonebranch_extension.zip
+          asset_content_type: application/zip
