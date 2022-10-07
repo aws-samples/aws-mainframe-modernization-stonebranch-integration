@@ -15,18 +15,19 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           pip3 install flake8
+          echo "Linting code"
           python3 -m flake8 --ignore=E501,E722
       - name: Build package
         run: |
           pip3 install --no-cache --upgrade pip setuptools twine
           VERSION=`python3 setup.py --version`
           python3 setup.py bdist_egg
-          cp assets/* dist/
           cd dist/
           mv *.egg extension_archive.zip
-          zip -r aws_stonebranch.zip extension_archive* template*
       - name: Archive extension artifacts
         uses: actions/upload-artifact@v3
         with:
           name: aws_mainframe_modernization_stonebranch_extension
-          path: dist/aws_stonebranch.zip
+          path: |
+            dist/*.zip
+            assets/template*
