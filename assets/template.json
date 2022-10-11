@@ -32,7 +32,7 @@
     "credentialFieldsRestriction": "No Restriction",
     "credentials": null,
     "credentialsVar": null,
-    "description": "v1.3.4 AWS M2 - Mainframe Modernization",
+    "description": "AWS Mainframe Modernization",
     "desktopInteract": false,
     "elevateUser": false,
     "environment": [],
