@@ -7,7 +7,11 @@ The repo has integration template that has to be loaded as a zip to stonebranch 
 AWS Services that are used in this solutions are:
 
 - [AWS Mainframe Modernization Service](https://aws.amazon.com/mainframe-modernization/)
+- [AWS Lambda](https://aws.amazon.com/lambda/)
 
+## Architecture
+
+![Architecture Diagram](assets/m2-vault-integration.png)
 ## Components details
 
 [assets/template.json](assets/template.json) - This is an universal template that has to be loaded to stonebranch. This template offers configuration of access , batch operations and schedules.
